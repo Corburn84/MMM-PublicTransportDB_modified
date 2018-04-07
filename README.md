@@ -32,7 +32,17 @@ npm install
 
 ## How to get the `stationId`
 
-You will need a `stationId` for your module from the DB network. *TODO* _Link full list or query target to get station IDs._
+You will need a `stationId` for your module from the DB network.
+You can query the `stationId` by adding the name of the station to the following URL:
+`https://reiseauskunft.bahn.de/bin/ajax-getstop.exe/dn?start=1&S=`
+
+For example: `https://reiseauskunft.bahn.de/bin/ajax-getstop.exe/dn?start=1&S=Frankfurt Hauptbahnhof`
+
+The result looks something like this:
+```
+SLs.sls={"suggestions":[{"value":"Frankfurt(Main)Hbf","id":"A=1@O=Frankfurt(Main)Hbf@X=8663785@Y=50107149@U=80@L=008000105@B=1@p=1521772327@","extId":"008000105","type":"1","typeStr":"[Bhf/Hst]","xcoord":"8663785","ycoord":"50107149","state":"id","prodClass":"443","weight":"31301"}]};SLs.showSuggestion();
+```
+You're looking for the number after `extId`, in this example the stationId of Frankfurt Central Station would be `008000105`.
 
 ## Configuration
 
