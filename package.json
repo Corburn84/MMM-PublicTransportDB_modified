@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/deg0nz/MMM-PublicTransportDB#readme",
   "dependencies": {
-    "db-hafas": "latest"
+    "db-hafas": "latest",
+	"bluebird": "3.4.5
   }
 }

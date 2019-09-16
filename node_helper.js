@@ -1,7 +1,7 @@
 "use strict";
 const NodeHelper = require('node_helper');
+const Promise = require('bluebird');
 const Fetcher = require('./DbFetcher');
-const Promise = require('./vendor/bluebird-3.4.5.min');
 
 module.exports = NodeHelper.create({
 
